@@ -1,0 +1,29 @@
+#include "Node.h"
+#include "Student.h"
+#include <iostream>
+
+Node::Node() { //Constructor
+  value = NULL;
+  next = NULL;
+}
+
+Node::~Node() { //Destructor
+  delete &value;
+  next = NULL;
+}
+
+void Node::setValue(Student* newvalue) {
+  value = newvalue;
+}
+
+Student* Node::getValue() {
+  return value;
+}
+
+void Node::setNext(Node* newnext) {
+  next = newnext;
+}
+
+Node* Node::getNext() {
+  return next;
+}

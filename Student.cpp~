@@ -1,0 +1,22 @@
+#include <iostream>
+#include <cstring>
+#include "Student.h"
+
+using namespace std;
+
+Student::Student(const char* name, int id) {
+  strcpy(nameInput, name);
+  idInput = id;
+}
+
+Student::~Student() {
+  delete nameInput;
+}
+
+char* Student::getName() {
+  return nameInput;
+}
+
+int Student::getID() {
+  return idInput;
+}
